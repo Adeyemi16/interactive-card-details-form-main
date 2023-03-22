@@ -1,0 +1,240 @@
+:root{
+    /* ## Colors */
+
+/* ### Primary  */
+
+   --Linear-gradienta: hsl(249, 99%, 64%); 
+   --linear-gradientb:hsl(278, 94%, 30%);
+   --Red : hsl(0, 100%, 66%);
+
+/* ### Neutral */
+
+   --White: hsl(0, 0%, 100%);
+   --Light-grayish-violet: hsl(270, 3%, 87%);
+   --Dark-grayish-violet: hsl(279, 6%, 55%);
+   --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Overpass', sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.cards{
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.carda{
+    background: url(images/bg-card-front.png); 
+    
+    background-repeat: no-repeat;
+    background-size:  contain;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 313px; 
+    height: 194px;
+    padding: 15px;
+}
+
+.cardb{
+    background: url(images/bg-card-back.png);
+    background-repeat: no-repeat;
+    margin-left: 250px;
+    background-size:  contain;
+    width: 371px; 
+    height: 194px;
+    display: flex;
+    text-align: right;
+    align-items: center;
+    justify-content: right;
+    /* padding: 15px; */
+}
+
+.first{
+    width: 30vw;
+    height: 100vh;
+    background: url(images/bg-main-desktop.png);
+    background-repeat:  no-repeat;
+
+}
+.second{
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    Font-size: 18px;
+}
+
+.input{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input{
+    height: 35px; 
+    border-radius: 5px; 
+    border-color: hsl(270, 3%, 87%);
+}
+input:focus{
+    border-color: var(--Light-grayish-violet);
+
+}
+/* .inputb{
+ display: flex;
+ flex-direction: row;
+} */
+
+.pa{
+    /* font-weight: 500; */
+}
+
+.card-details{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+#month{
+    width: 80px; 
+    height: 35px; 
+    border-radius: 5px; 
+    border-color: hsl(270, 3%, 87%);
+}
+
+#year{
+    width: 80px; 
+    height: 35px; 
+    border-radius: 5px; 
+    border-color: hsl(270, 3%, 87%);
+}
+
+#cvcB{
+    height: 35px; 
+    border-radius: 5px; 
+    border-color: hsl(270, 3%, 87%);
+}
+
+#btn{
+    background: hsl(278, 68%, 11%); 
+    color: white; 
+    border: none; 
+    margin-top: 20px; 
+    width: 360px; 
+    height: 35px; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+@media screen and (max-width: 450px) {
+    html{
+        width: 100vw;
+        height: 100vh;
+    }
+    main{
+        /* display: flex; */
+        flex-direction: column;
+        /* gap: 200px; */
+        width: 100vw;
+        height: 100vh;
+    }
+    .first{
+        width: 100vw;
+        height: 43vh;
+        line-height: 0px;
+        background-size:  100%;
+        padding: 20px;
+        align-items: center;
+    }
+    .cards{
+        position: fixed;
+        display: flex;
+        /* display: none; */
+        flex-direction: column-reverse;
+        /* flex-direction: column; */
+        margin-left: 20px;
+        align-items: flex-start;
+        column-gap: 20px;
+        height: 45vh;
+        width: 100vw;
+        justify-content: flex-start;
+        color: white;
+    }
+    
+    .carda{
+        display: flex;
+        flex-direction: column;
+        line-height: 20px;
+        gap: 0;
+        width: 250px; 
+        height: 154px;
+        padding: 15px;
+    }
+    
+    .cardb{
+
+        margin-left: 136px;
+        margin-top: 20px;
+        width: 300px; 
+        height: 148px;
+        z-index: -1;
+    }
+    .second{
+        width: 100vw;
+        height: 55vh;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    p{
+        Font-size: 20px;
+        font-weight: 500;
+    }
+    
+    input{
+        height: 60px;
+        border-radius: 10px; 
+        font-size: larger;
+    }
+    #month{
+        height: 50px; 
+        border-radius: 10px; 
+    }
+    #year{
+        height: 50px;
+        border-radius: 10px;
+    }
+    #cvcB{
+        height: 50px;
+        width: 170px;
+        border-radius: 10px; 
+    }
+    .svgA{
+        display: flex;
+        height: 27px;
+    }
+    #btn{
+       height: 60px;
+       font-size: larger;
+    }
+}
